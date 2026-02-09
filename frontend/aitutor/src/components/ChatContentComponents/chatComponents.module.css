@@ -1,0 +1,125 @@
+.courseText {
+    font-size: 1.2em;
+    color: var(--modern-grey);
+    margin-left: var(--large-margin);
+    font-weight: 250;
+}
+
+.courseName {
+    color: black;
+    margin-left: var(--common-margin);
+}
+
+.chatMain {
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+  }
+
+hr {
+    border: none;
+    height: 0.4px;
+    background: #6c6c6c;
+  }
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+}
+  
+.userBubble {
+    background-color: var(--chat-bubble-blue);
+    max-width: 60%;
+    align-self: flex-end;
+    text-align: left;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 4px 10px;
+    margin-bottom: var(--common-margin);
+    margin-top: var(--common-margin);
+    white-space: pre-wrap;   /* preserves newlines */
+    overflow-x: auto;
+
+    word-break: normal;     /* don't break words */
+    overflow-wrap: normal;  /* don't force wrapping */
+}
+
+.chatInputBar{
+    width: 100%;
+    position: relative;
+  }
+  
+  .input{
+    width: 100%;
+    padding: 19px 30px 0 30px; /* keep space for arrow */
+    font-size: 1.1em;
+    resize: none;
+    border: var(--input-border);
+    border-bottom: 0px solid;
+    border-radius: var(--input-border-radius) var(--input-border-radius) 0 0;
+    position: relative;
+    bottom: 40px;
+    margin-bottom: 0px;
+  }
+  
+
+  .inputIcon {
+    transition: transform 0.2s ease-in-out;
+    cursor:pointer;
+    display: inline-block;
+    transition: transform 0.15s ease, filter 0.15s ease;
+  }
+
+  .clip {
+    font-size: 25px;
+    margin-left: 7px;
+  }
+  .arrow {
+    font-size: 35px;
+  }
+
+  .stop {
+    display: none;
+  }
+  
+.inputIcons {
+  margin: 0px;
+  position: relative;
+  border: var(--input-border);
+  border-top: 0px;
+  border-radius: 0 0 var(--input-border-radius) var(--input-border-radius);
+  padding: 15px;
+  bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+  .inputIcon:hover {
+    filter: brightness(0.3);
+    transform: scale(1.08);
+  }
+
+  .clipContainer:hover .inputIcon {
+    filter: brightness(0.3);
+    transform: scale(1.08);
+  }
+
+
+
+  .paddingSpace {
+    transition: all 0.5s ease-in-out;
+    height: var(--paddingBottomHeight);
+  }
+
+
+  .clipText {
+    top: 47px;
+    right: 92.5%;
+    visibility: hidden;
+  }
+  
+
+  .clipContainer:hover .clipText {
+    visibility: visible;
+  }

@@ -1,0 +1,55 @@
+:root {
+    --sidebar-color: #f6f7f8;
+    --sidebar-width: 240px;
+    --sidebar-width-closed: 70px;
+    --logo-size: 45px;
+    --sidebar-padding: 7px;
+    --sidebar-icon: 25px;
+    --sidebar-hover-color: #cdcdcd;
+
+
+    --chatPage-header-height: 60px;
+    --chatPage-input-height: 90px;
+    --chatPage-content-width: 850px;
+    --paddingBottomHeight: 40vh;
+
+    --thin-border: 1px solid #d8dde5;
+    --modern-grey: #a0aec0;
+    --chat-bubble-blue: #3b82f6;
+    --common-margin: 20px;
+    --large-margin: 50px;
+    --common-border-radius: 7px;
+
+    --input-border: 1px solid var(--modern-grey);
+    --input-border-radius: 35px;
+
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    "Apple Color Emoji","Segoe UI Emoji";
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin:  0px;
+}
+
+textarea:focus {
+    outline: none;
+  }
+
+  
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+
+.hoverText {
+  background-color: black;
+  color: white;
+  font-size: 0.8em;
+  padding: 3px;
+  border-radius: 5px;
+  font-weight: 500;
+  position: absolute;
+  white-space: nowrap;
+  }

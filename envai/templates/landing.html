@@ -1,0 +1,168 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EnvAI</title>
+        <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+        <link href="https://fonts.cdnfonts.com/css/typographica" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="icon" type="image/png" href="{% static 'img/main.png' %}">
+
+    </head>
+
+    <body>
+        <header>
+            <div ID="header_div">
+                <div class="flex_div">
+                    <img src="{% static 'img/logo.png' %}" alt="logo" id="main_logo">
+                </div>
+
+                <div class="flex_div">
+                    <a id="login_button" href="{% url 'auth' %}?mode=signin" class="button">Sign in</a> 
+                    <a id="signup_button" href="{% url 'auth' %}?mode=singup" class="button blue-btn-hover">Get started</a>
+                </div>
+            </div>
+        </header>
+
+
+        <div id="section1" class="section">
+            <div id="section1_text">
+                    <div id="section1_text_wrapper">
+                        <div id="section1_primary" class="huge_bold">
+                            <p>Create an AI</p>
+                            <p>Environment </p>
+                            <p>for<span style="color: #117fec;"> any job.</span> <span style="color: #1060b0;"></span></p>
+                            <p><span style="color: #1060b0;">Any group.</span></p>
+                        </div>
+                            <div id="section1_secondary" class="grey_standard">
+                               Build a shared AI environment for your group. Choose what it includes — tools, features, and workflows — and everyone gets one AI agent that understands the space, the members, and how you work. Ask for what you need, and it handles the details with clear previews before anything is sent or changed.
+                            </div>
+                            <a id="start_button" href="{% url 'auth' %}?mode=singup" class="button blue-btn-hover">Create your AI environment</a>
+                        </div>
+            </div>
+            <div id="section1_img">
+                <img src="{% static 'img/preview.png'%}"  class="example_pic" id="example_1" alt="example AI conversation">
+                <img src="{% static 'img/previewr.png'%}"  class="example_pic" id="example_1_narrow" alt="example AI conversation">
+            </div>
+        </div>
+
+
+        <div id="section_2" class="section">
+            <div class="blue_bold_text" id="section2_subheader">HOW IT WORKS</div>
+            <div id="section2_header">Set it up once. Let the AI run the group.</div>
+            <div id="section2_subtext">
+                <p>Build an AI environment for your group, choose the features you want, and let the AI manage</p>
+                <p style="text-align: center;">messages, events, and group tasks for you.</p>
+            </div>
+
+            <div id="step_div">
+                <div class="step">
+                    <div class="step_header"><i class="bi bi-patch-plus step-i"></i> <p class="step_num">1</p></div>
+                    <div class="bold_headline step_larger_text">Create an Environment</div>
+                    <div class="step_smaller_text">Create a shared space for your group, project, or task.
+The AI uses this context to understand what you’re working on and who’s involved.</div>
+                </div>
+                <i class="bi bi-arrow-right arrow"></i>
+                <div class="step">
+                    <div class="step_header"> <i class="bi bi-sliders2 step-i"></i> <p class="step_num" >2</p></div>
+                    <div class="bold_headline step_larger_text">Choose What the AI Can Do</div>
+                    <div class="step_smaller_text">Turn features on or off as needed — messaging, events, tasks, and more.
+Only enable what your environment actually needs.</div>
+                </div>
+                <i class="bi bi-arrow-right arrow" ></i>
+                <div class="step">
+                    <div class="step_header"><i class="bi bi-ui-checks step-i"></i> <p class="step_num">3</p></div>
+                    <div class="bold_headline step_larger_text">Let the AI Handle the Flow</div>
+                    <div class="step_smaller_text">After choosing your features, just talk to the AI. It knows your environment and handles everything seamlessly in the background.</div>
+                </div>
+            </div>
+
+
+            <div class="example-card">
+                <div id="example_card_text_box">
+                    <div class="blue_bold_text" id="example_examples_card">EXAMPLE: MESSAGE DRAFTING</div>
+                    <div class="large_black_bold_text" id="example_eadline">Say it right — without overthinking it.</div>
+                    <div id="example_card_text">Send a message to your friend, boss, or coworker with ease. EnvAI helps you phrase things clearly and naturally, so your message sounds right for the situation. Just say what you want to communicate, and the AI shapes it into a message that fits the person and the moment.</div>
+                </div>
+                <div id="example_card_img">
+                    <img src="{% static 'img/example.png'%}" alt=""> 
+                </div>
+            </div>
+        </div>
+
+
+        <div id="section3" class="section">
+            <div id="section3_text">
+                <div class="huge_bold" id="section3_header">
+                    <p>Build an environment</p>
+                    <p>that aligns with your group.</p>
+                    <p><span style="background:linear-gradient(90deg,#274bff,#32a6ff); -webkit-background-clip:text; background-clip:text; color:transparent;">Infinite use cases</span></p>
+                </div>
+                <div class="grey_standard">
+                    Your AI group environment can be anything — for work, friends, or school.
+You choose the features once, and from then on everything happens through the AI.
+On every screen, you interact with your environment by simply telling the AI what you want — no manual editing, ever.
+                </div>
+            </div>
+            <div id="section3_cards">
+                <div id="section3_c1">
+                    <div class="type_card">
+                        <div class="type-card-header">
+                            <i class="bi bi-mortarboard type-icon"></i></s>
+                        </div>
+                        <div class="type-header bold_headline">
+                            Study Groups
+                        </div>
+                        <div class="type-card-text">
+                            “Where in our course textbook can I read about derivatives?”
+                        </div>
+                    </div>
+                    <div class="type_card">
+                        <div class="type-card-header">
+                            <i class="bi bi-rocket-takeoff type-icon"></i>  
+                        </div>
+                        <div class="type-header bold_headline">
+                            Startup Idea
+                        </div>
+                        <div class="type-card-text">
+                            “Take our startup idea, define next steps, and notify the team.”
+                        </div>
+                    </div>                    
+                </div>
+                <div id="section3_c2">
+                    <div class="type_card">
+                        <div class="type-card-header">
+                            <i class="bi bi-airplane type-icon"></i>             
+                        </div>
+                        <div class="type-header bold_headline">
+                            Trip Planning
+                        </div>
+                        <div class="type-card-text">
+                            “Find the cheapest flight from Tokyo to California and send the details to Daniel.”
+                        </div>
+                    </div>
+
+                    <div class="type_card">
+                        <div class="type-card-header">
+                           <i class="bi bi-suitcase-lg type-icon"></i>
+                        </div>
+                        <div class="type-header bold_headline">
+                            Work Team
+                        </div>
+                        <div class="type-card-text">
+                            “Summarize this week’s calendar and show which meetings I’m assigned to.”
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="footer">FOOTER</div>
+    </body>
+
+
+</html>

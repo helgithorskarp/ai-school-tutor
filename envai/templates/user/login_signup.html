@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet"href="{% static 'css/signin.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="{% static 'img/main.png' %}">
+        <title id="title"></title>
+    </head>
+
+    <body>
+        <input type="hidden" id="csrf-token" name="csrf-token" value="{{ csrf_token }}">
+
+
+        <div id="input_feild_wrapper">
+            <div id="input_feild">
+                <div id="input-card">
+                <div id="logo-header">
+                    <img src="{% static 'img/logowhite.png' %}" alt="envAI logo">
+                </div>
+
+
+                    <div id="signin-block" class="block">
+                        <div class="header-block-wrapper">
+                            <div class="header-block">Log in</div>
+                        </div>
+ 
+                       <form id="form1">
+                             <input type="hidden" name="action" value="signin">
+                            <div class="form-row-wrapper">
+                                <div class="email-form form-row centralize">
+                                    <label for="email_signin">Email</label>
+                                    <input required placeholder="Email" type="text" name="email" id="email_signin" class="text-input">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row-wrapper">
+                                <div class="passowed-form form-row centralize">
+                                    <label for="password_signin">Password</label>
+                                    <input required placeholder="Password" name="password" id="password_signin" type="password" class="text-input">
+                                </div>
+                            </div>
+                            <input type="submit" value="Continue" id="submit1">
+
+                            <div class="error_wrapper">
+                                    <div class="error" id="error_signin">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="error-icon"
+                                            >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
+                                            />
+                                        </svg>
+                                        <span id="error_message_1"></span>
+                                    </div>
+                            </div>
+                                     
+                        </form>
+
+                        <div class="form-options">
+                            <div class="divider"></div>
+                            <div class="footer-form">Don't have an account? 
+                                <span id="create-account" class="switch-screens-text">Create your account</span></div>
+                        </div>
+
+                    </div>
+                    <div id="signup-block" class="block" style="display: none;">
+                        <div class="header-block-wrapper">
+                            <div class="header-block">Create your account</div>
+                        </div>
+
+                        <form id="form2">
+                            <input type="hidden" name="action" value="signup">
+                            <div class="form-row-wrapper">
+                                <div class="email-form form-row centralize">
+                                    <label for="name_signup">Username</label>
+                                    <input required placeholder="Username" type="text" name="name" id="name_signup" class="text-input">
+                                </div>
+                            </div>
+
+                            <div class="form-row-wrapper">
+                                <div class="email-form form-row centralize">
+                                    <label for="email_signup">Email</label>
+                                    <input required placeholder="Email" type="text" name="email" id="email_signup" class="text-input">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row-wrapper">
+                                <div class="passowed-form form-row centralize">
+                                    <label for="password_signup">Password</label>
+                                    <input required placeholder="Password" name="password" id="password_signup" type="password" class="text-input">
+                                </div>
+                            </div>
+                             <div class="form-row-wrapper">
+                                <div class="passowed-form form-row centralize">
+                                    <label for="password_signup_rewrite">Confirm Password</label>
+                                    <input required placeholder="Confirm Password" name="password_rewrite" id="password_signup_rewrite" type="password" class="text-input">
+                                </div>
+                            </div>
+                            <input type="submit" value="Create account" id="submit2">
+
+                            <div class="error_wrapper">
+                                    <div class="error" id="error_signup">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="error-icon"
+                                            >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
+                                            />
+                                        </svg>
+                                        <span id="error_message_2"></span>
+                                    </div>
+                            </div>
+
+                        </form>
+                        <div class="form-options">
+                            <div class="divider"></div>
+                            <div class="footer-form">Already have an account?
+                                <span id="signin-account" class="switch-screens-text">Log in</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="visual_feild_wrapper">
+            <div id="visual_feild">
+                <div class="video-wrapper">
+                    <video src="{% static 'videos/auth_video.mp4'%}"  id="video"
+                    autoplay
+                    muted="muted"
+                    loop
+                    playsinline
+                    preload="auto">
+                    </video>
+                </div>  
+            </div>
+        </div>
+
+
+    <script src="{% static 'js/signin.js' %}"></script>
+    </body>
+</html>

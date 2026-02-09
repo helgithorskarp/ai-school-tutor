@@ -1,0 +1,55 @@
+.layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    transition: grid-template-columns 250ms ease;
+  }
+  
+  .layout.collapsed {
+    grid-template-columns: var(--sidebar-width-closed) 1fr;
+  }
+  
+
+  .chatContainer {
+    display: grid;
+    grid-template-rows: var(--chatPage-header-height) 1fr;
+    height: 100vh;
+  }
+  
+  .contentWrapper {
+    width: 100%;
+    /* remove the 2-row template */
+    display: grid;
+    min-height: 0;  /* important for scroll inside grid */
+  }
+  
+  .scrollScreen {
+    height: 100%;       /* instead of 100vh */
+    min-height: 0;      /* important */
+    overflow-y: auto;   /* nicer than scroll */
+    width: 100%;
+    position: relative;
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+
+.headerWrapper {
+  border-bottom: var(--thin-border);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.contentItem {
+  width: var(--chatPage-content-width);
+  margin: 0 auto;
+}
+
+
+
+.paddingSpace {
+  transition: padding 0.1s ease;
+  padding-bottom: 65vh;
+}

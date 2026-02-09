@@ -1,0 +1,61 @@
+.Sidebar {
+    position: sticky;
+    background-color: var(--sidebar-color);
+    height: 100vh;
+    transition: width 0.3s ease-in-out;
+    border: var(--thin-border);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+img {
+    height: var(--logo-size);
+    width: auto;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    padding: 4px;
+    border-radius: var(--common-border-radius);
+}
+
+.sidebarIcon {
+    font-size: var(--sidebar-icon);
+    cursor: pointer;
+    position: relative;
+
+    transition: all 0.15s ease;
+    padding: 4px;
+    border-radius: var(--common-border-radius);
+    align-self: flex-end;
+    bottom: 5px;
+}
+
+
+.sidebarhover:hover {
+background-color: var(--sidebar-hover-color);
+}
+
+
+
+.sidebarIconContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 9px;
+}
+
+.sidebarIconContainer:hover .closeText {
+    visibility: visible !important;
+}
+
+.closeText {
+    top: 36px;
+    left: 100%;
+    margin-left: -60px;
+    visibility: hidden;
+  }

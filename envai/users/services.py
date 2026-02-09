@@ -1,0 +1,7 @@
+from django.contrib.auth.models import User
+
+def create_user(username, email, password):
+    user = User.objects.create(username=username, email=email)
+    user.set_password(password)
+    user.save()
+    return user

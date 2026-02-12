@@ -15,10 +15,17 @@ wss.on("connection", (ws) => {
 
   ws.on("message", async (msg) => {
     /// fetch coursepromp
-  let response = await fetch(`${djangoServerUrl}/api/rag?code=T-301-REIR`);
+
+    let prompt;
+    try {
+  let response = await fetch(`${djangoServerUrl}/api/rag?code=T-301-REIR&user=${msg}`);
   console.log(response)
   let jsonObj = await response.json();
-  let prompt = jsonObj.prompt;
+  prompt = jsonObj.prompt;
+    }
+    catch(er) {
+    prompt = "request failed";
+    }
 
 
 

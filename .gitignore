@@ -1,2 +1,4 @@
 ws/node_modules/
 ws/.env
+envai/environments/RAG/.env
+

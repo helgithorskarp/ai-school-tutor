@@ -1,6 +1,6 @@
 # AI School Tutor
 
-🚧 **Status:** Currently being implemented
+**Status:** Currently being implemented
 
 ---
 
